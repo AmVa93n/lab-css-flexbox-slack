@@ -107,14 +107,17 @@ header button {
 }
 
 #hero-container {
-    width: 62rem;
+    width: 100%;
     height: 30rem;
     overflow: hidden;
+    position: relative;
 }
 
 #hero-container img {
-    width: 62rem;
-    height: 40rem;
+    position: absolute;
+    top: 6rem;
+    left: 10rem;
+    transform: scale(1.5);
 }
 
 #trusted {
@@ -142,6 +145,10 @@ header button {
 
 .logos img {
     width: 100%;
+}
+
+#logos-oneline {
+    display: none;
 }
 
 #stats {
@@ -252,4 +259,91 @@ footer small {
     width: 90%;
     margin: 1.5rem auto;
     display: block;
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    #nav-logos-right {
+        width: 15%;
+    }
+
+    header {
+        height: 75rem;
+    }
+
+    header .container {
+        align-items: flex-start;
+    }
+
+    header .container button {
+        width: 55%;
+        margin-left: 2rem;
+    }
+    
+    header h1 {
+        width: 43%;
+        font-size: 7.5rem;
+        margin-top: 3rem;
+        margin-left: 3rem;
+        text-align: left;
+        font-weight: 700;
+    }
+
+    #hero-container {
+        width: 100%;
+        position: relative;
+        top: -50rem;
+        left: 40rem
+    }
+
+    #hero-container img {
+        position: absolute;
+        top: 0rem;
+        right: 0rem;
+        transform: none;
+    }
+
+    .logos {
+        display: none;
+    }
+
+    #logos-oneline {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #stats ul, #links {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #stats ul {
+        margin-bottom: 2rem;
+    }
+
+    #stats li {
+        width: 35%;
+        align-items: flex-start;
+        margin-top: 2rem;
+    }
+
+    #stats li p {
+        text-align: left;
+        margin-left: 3rem;
+    }
+
+    #welcome button {
+        width: 70%;
+    }
+
+    #icons {
+        width: 40%;
+        margin-left: 4rem
+    }
+
+    footer small {
+        margin-left: 4rem;
+        width: 70%;
+    }
 }
